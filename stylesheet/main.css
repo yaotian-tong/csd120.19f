@@ -5,11 +5,14 @@ body{
     }
     
 h1{
-    color: #000000;
+    color: blue;
     }
     
-hyperlink elements{
-    color : #8259AF;
+a {
+  color : #8259AF;
+}
+header nav a {
+    color : #5E5369;
     }
     
    
