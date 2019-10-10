@@ -30,9 +30,16 @@ em {
 }
 
 .byline{
+    size:70%;
     color: red; 
     color: rgba(255,255,255,0.5)
 }
 .page-copyrigh{
     color:#8259AF
 }
+
+footer{
+    size :12px;
+    text-align: center;
+}
+
