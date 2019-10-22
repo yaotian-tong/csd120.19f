@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+ <style>
+ #example1 {
+  box-shadow: 2px 2px 3px;
+}
+ div {     opacity: 0.5;
+ }
+ 
+h1,h2{
+    text-shadow:1px 1px 1px #790973;
+    opacity:0.8;
+   -webkit-background-clip :#790973;
+}
+ </style>
 
 <link rel="stylesheet" href="stylesheet/normalize.css" type="text/css">
 <link rel="stylesheet" href="stylesheet/main.css" type="text/css">
@@ -14,6 +26,47 @@
 </head>
     
 <body>
+  <div class="width-wrap" >
+   <style>
+        div{
+  background-color: #92a8d1;
+    }
+        
+         width-wrap {
+             max-width: 1024px;
+             margin-left:atuo;
+             margin-right:atuo;
+             border: 1px solid gray;
+         }
+             p.ex1{
+               
+               padding-right: 2em;
+               padding-left: 2em;
+               margin-bottom: 3em;
+                 }
+            div {
+                 opacity: 0.7;
+                     }
+          div {
+        border-style: solid black;
+   border-bottom-width: 1px;
+        }
+        
+        #example1 {
+  box-shadow: 5px 10px;
+    }
+    
+        
+         div hr{
+            min-width:300px;
+            margin-bottom: 2em;
+            margin-top: 3em;
+            color:#790973;
+            border-bottom-style: solid;
+          border-top-left-radius:8px;
+          border-top-left-radius:8px;
+        }
+         </style>
     <header>
          <nav>    
             <ul>
@@ -29,7 +82,11 @@
         <section class="bio">
             <h1 class="intro">Welcome to YAOTIAN TONG’s CSD120 Website</h1>
             <figure class ="mugshot">
-                <a href="images/me.jpg"><img src="images/me_thumb.jpg" alt="me" width="100" height="100" ></a>
+                <div>
+                <figure id="example1" >
+                <a href="stylesheet"><img src="stylesheet/me.jpg" alt="me" width="80" height="80" ></a>
+                </figure>
+                </div>
                 <figcaption>A picture of me</figcaption>
             </figure>
             
@@ -64,8 +121,9 @@
     
     <footer>
     
-  
-        <hr>
+        <div class="hr">
+        <hr width="50%">
+        </div >
         <blockquote>
         		"The value of life lies not in the length of days, but in the use we make of them."<br>
         		<em class="important ">&mdash; <span class="byline">Montaigne</span></em>
