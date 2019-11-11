@@ -76,7 +76,10 @@ footer {
 }
 
 .mugshot img {
+     float: right;
+     top:-1em;
     box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    background-image:url("paperclip.png")；
 }
 
 footer hr {
@@ -101,6 +104,53 @@ h2 {
 
     text-shadow: 1px 1px 1px rgba(121,9,115,0.2);
     -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
+}
+
+div paperclip{position: absolute;
+             width :50px;
+             height:50px;
+            top:10px;
+            right-top: 7px;
+            background-size :contain;
+            padding-top:1em;
+            padding-bottom:0.5em;
+            margin-right:1em;
+            margin-left:1em;
+
+    
+}
+
+My Three Favourites NBA stars{
+    
+}
+header{
+    float:right;
+    opacity: 0.9;
+    border-top: 5px solid;
+    margin-right:-2em;
+    margin-left:-2em;
+    
+    
+}
+.box{
+     float:left;
+}
+nav{
+    margin-right:2em;
+    margin-left:2em;
+     margin-top:-4px;
+    padding:2em;
+    border-bottom:1px;opacity: 0.7;
+}
+
+.back-to-top { 
+    text-align: right;
+    margin-right:-0.5em;
+    opacity: 0.5;
+    
+    
+}
+ANCHOR{
+    border-bottom:3.5em;
 }
