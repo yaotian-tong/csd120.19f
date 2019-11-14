@@ -107,6 +107,7 @@ h2 {
     color: transparent;
 }
 
+
 div paperclip{position: absolute;
              width :50px;
              height:50px;
@@ -153,4 +154,11 @@ nav{
 }
 ANCHOR{
     border-bottom:3.5em;
+=======
+div paperclip{width :50px;
+            height:50px;
+           up:70px;
+           right-top: 7px 
+    
+>>>>>>> refs/heads/master
 }
