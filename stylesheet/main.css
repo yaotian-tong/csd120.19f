@@ -182,7 +182,7 @@ nav{
 
 .grid-container {
        display: grid;
-        grid-columns: auto  ; 
+        grid-template-columns: 1fr 1fr; 
         grid-gap: 2em;
     
 }
@@ -200,44 +200,43 @@ nav{
 
 
 .glossary{
-    column-span:all;
+    grid-column: span 2;
     
 }
-.useful-links{
-    column-span: all;
+#useful-links{
+    grid-column: span 2;
 }
 
 body{
-    height: 100%;
-    min-width: 999px;
+    min-height: 100vh;
     overflow: auto;
+
+    display: flex;
 }
 .width-wrap{
-      flex-direction:column;
+    display: flex;
+    flex-direction:column;
 }
 footer{
     margin-top:auto;
 } 
 .gallery{
-    
+    grid-column: span 2;
+    width: 100%;
 }
 .gallery-thumbnails{
     display: grid;
-  grid-columns: auto auto auto auto;
-  grid-gap: 10px;
-  padding: 10px;
+    grid-template-columns: 25% 25% 25% 25%;
 }
-.gallery-thumbnails >div{
-    text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-    
+.gallery-thumbnails img {
+    width: 100%;
+    display: block;
 }
 .row-span-2{
-    column-span:2;
+    grid-row: span 2;
 }
 .col-span-2{
-    column-span:2;
+    grid-column: span 2;
 }
 .gray { 
     -webkit-filter: grayscale(100%);
@@ -248,4 +247,7 @@ footer{
     filter: grayscale(100%);
 	
     filter: gray;
-    }
+}
+.gray:hover {
+    filter: none;
+}
