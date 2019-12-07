@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+table,td,th{
+  border: 1px solid black;
+  border-collapse: collapse;
+   background-color: black ; 
+   opacity: 0.75;
+   padding-top: 0.3em;
+   padding-bottom: 0.3em;
+   padding-left: 1em;
+   padding-right: 1em;
+}
+table tr:nth-child(even) {
+  background-color: #fff;
+  }
+  
+td{
+  text-align: center;
+   
+}
+
+</style>
+
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +30,8 @@
 <link rel="stylesheet" href="stylesheet/normalize.css" type="text/css">
 <link rel="stylesheet" href="stylesheet/main.css" type="text/css">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="stylesheet" href="stylesheet/baguetteBox.css" type="text/css">
+<link rel="stylesheet" href="stylesheet/baguetteBox.js" type="text/javascript">
 <!-- missing google font link! -->
 
 
@@ -19,7 +43,10 @@
   <div class="width-wrap" >
     <header id="top">
          <nav>    
-            <div class="burger"></div>
+            <label class="burger">
+            <input type="checkbox" id="burger-toggle">
+            <label for="checkbox">checkbox</label>
+            </label>
             <ul class="flex-container">
                <li><a href="index.html">Home</a></li>
                <li><a href="links.html">Link</a></li>
@@ -54,7 +81,6 @@
                
             </ol> 
         </section>
-        
         <section class="haiku">
             <h2 class="intro">Haiku</h2>
             <p style="color:red">
@@ -65,6 +91,61 @@
         		<span class="byline"><em class="important"> By <strong>Paul Holmes</strong></em></span>
         	  </p >
         </section>
+        
+        <section>
+            <h2>My Sault College Courses</h2>
+            <table style="width:60%">
+                <tr>
+                <th>Term</th>
+                <th>Code</th> 
+                <th>Course Name</th>
+                </tr>
+                <tr>
+                <th rowspan="6">Fall</th>
+                <tr>
+                <td>CSD105</td> 
+                <td>Python</td>
+                </tr>
+                <tr>
+                <td>CSD120</td>
+                <td>Introduction to Web Development</td>
+                </tr>
+                 <tr>
+                <td>CSO104</td>
+                <td>Introduction to Operating Systems and Lan</td>
+                </tr>
+                 <tr>
+                <td>MTH112</td>
+                <td>Computer Mathematics</td>
+                </tr>
+                 <tr>
+                <td>TNY130</td>
+                <td>Technology in Scoiety</td>
+                <tr>
+                <th rowspan="6">Winter</th>
+                <tr>
+                <td>CSA103</td> 
+                <td>Business Applications I</td>
+                </tr>
+                <tr>
+                <td>CSD102</td> 
+                <td>Programming Using C++</td>
+                </tr>
+                <tr>
+                <td>CSD212</td> 
+                <td>Web Scripting Languages</td>
+                </tr>
+                <tr>
+                <td>COS102</td> 
+                <td>Introduction to Linux</td>
+                </tr>
+                <tr>
+                <td>CST104</td> 
+                <td>PC Hardware & Networking</td>
+                </tr>
+            </table>
+        </section>
+        
         <section class="gallery">
         <h2>Photo Gallery</h2>
         <div class="gallery-thumbnails">
@@ -119,6 +200,54 @@
         
         </div>
         </section>
+        <section class="survey">
+        <h2>Survey</h2>
+         <form >
+         <label>What is your name ?:<br>
+         <input type="text" name="name_field"></label>
+         <br><br>
+         <label>What is your email ?:<br>
+          <input type="email" name="email_field"></label>
+          <br><br>
+          <label>Which integer is best ?:<br>
+        <input type="number" name="best_integer"></label>
+        <br><br>
+        <label>Which day is best ?:<br>
+        <input type="date" name="best_day"></label>
+        <br><br>
+        </form>
+        <label>Which bear is best ?:<br>
+        <input list="bears" name="best_bear" ></label>
+        <datalist id="bears">
+        <option value="none">
+        <option value="Black">
+        <option value=" Brown">
+        <option value="Care">
+        <option value="Panda">
+        <option value="Polar">
+        <option value="Teddy">
+        </datalist> 
+        <br><br>
+        <label>Do you like radio buttons ?:<br >
+        <label for="Yes">Yes</label>
+        <input type="radio" name="yes" value="yes"><br>
+        <label for="No">No</label>
+        <input type="radio" name="no"value="no"><br>
+        <label for="None of your business"> None of your business</label>
+        <input type="radio" name="?"value="?" ><br></label>
+        <br><br>
+        What is the meaning of life ?:
+        <textarea rows="10" cols="85">
+        Enter the correct answer here
+        </textarea>
+        <div class="Send">
+        <input type="button" name="Send" value="Send">
+        </div>
+
+        </form>
+        </section>
+
+       
     </main>
     
     <footer>
@@ -137,6 +266,11 @@
     </footer>
     <div class="back-to-top"><a href="#top">◤</a></div>
 </div>
-    
+<script>
+baguetteBox.run('.gallery-thumbnails', { 
+    filter: /picsum\.photos\/id/i 
+});
+
+</script>
 </body>
 </html>
