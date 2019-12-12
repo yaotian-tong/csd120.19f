@@ -1,13 +1,15 @@
 @charset "UTF-8";
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: #FFE7B8;
     color: #FFBF3E;
     /* missing font-family */
-   
-   
+
+
 }
 
 
@@ -26,8 +28,9 @@ header nav a {
     margin-right: 1em;
     border-top: 4px solid transparent;
 }
+
 header nav a:hover {
-  
+
     border-color: red;
 }
 
@@ -35,7 +38,7 @@ header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
+
     display: flex;
     justify-content: center;
 }
@@ -44,16 +47,21 @@ main ul {
     list-style-type: circle;
 }
 
-@media screen and ( max-width: 768px ) {
+@media screen and (max-width: 768px) {
     header ul {
         flex-direction: column;
         text-align: center;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        height: 0;
+        overflow: hidden;
     }
+
     header nav a {
         border-top: none;
     }
+
     header nav a:hover {
         border-top: none;
         text-decoration: underline;
@@ -67,7 +75,7 @@ p {
 
 .bio p {
     text-indent: 3em;
-    
+
 }
 
 em {
@@ -99,28 +107,29 @@ footer {
     margin-bottom: 3em;
     margin-left: auto;
     margin-right: auto;
-  
-    
 
-    border-left: 1px solid rgba(0,0,0,0.3);
-    border-right: 1px solid rgba(0,0,0,0.3);
-    border-bottom: 1px solid rgba(0,0,0,0.3);
 
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .mugshot {
-     float:right;
+    float: right;
     position: relative;
-    top:-1em;
+    top: -1em;
 }
+
 .mugshot img {
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 footer hr {
-  
-    
+
+
     width: 50vw;
     min-width: 300px;
     margin-bottom: 2em;
@@ -138,129 +147,140 @@ footer hr {
 
 h1,
 h2 {
-    background: rgb(247,226,247);
-    background: radial-gradient(circle, rgba(247,226,247,1) 0%, rgba(116,41,116,1) 100%); 
+    background: rgb(247, 226, 247);
+    background: radial-gradient(circle, rgba(247, 226, 247, 1) 0%, rgba(116, 41, 116, 1) 100%);
 
-    text-shadow: 1px 1px 1px rgba(121,9,115,0.2);
+    text-shadow: 1px 1px 1px rgba(121, 9, 115, 0.2);
     -webkit-background-clip: text;
     color: transparent;
 }
 
 
-.paperclip{
-            position: absolute;
-             width :50px;
-             height:50px;
-            top: -10px;
-            right: -7px;
-            background-image: url('../images/paperclip.png');
-            background-size :contain;
+.paperclip {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -10px;
+    right: -7px;
+    background-image: url('../images/paperclip.png');
+    background-size: contain;
 }
 
 .favourites {
     clear: both;
-    grid-column: 1 / 2; 
-    
+    grid-column: 1 / 2;
+
 }
 
-header{
-    border-top: 4px solid rgba(0,0,0,0.1);
-    margin-right:-2em;
-    margin-left:-2em;
+header {
+    border-top: 4px solid rgba(0, 0, 0, 0.1);
+    margin-right: -2em;
+    margin-left: -2em;
 }
 
-nav{
-    margin-right:2em;
-    margin-left:2em;
-    margin-top:-4px;
-    border-bottom: 1px dotted rgba(0,0,0,0.3);
+nav {
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-top: -4px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
     overflow: auto;
 }
 
-.back-to-top { 
+.back-to-top {
     text-align: right;
-    margin-right:-0.5em;
+    margin-right: -0.5em;
     opacity: 0.5;
-    
-    
+
+
 }
 
 .back-to-top:hover {
     opacity: 1;
 }
+
 .back-to-top a {
     position: fixed;
-    bottom:3.5em;
+    bottom: 3.5em;
 }
 
 main {
-       display: grid;
-       
-        grid-gap: 2em;
-    
-}
-.bio{
-     grid-column: 1 / span 2; 
+    display: grid;
+
+    grid-gap: 2em;
+
 }
 
-.haiku{
-    grid-column: 2/ 3; 
-}   
+.bio {
+    grid-column: 1 / span 2;
+}
 
-  
+.haiku {
+    grid-column: 2/ 3;
+}
+
+
 
 /* TODO: you need to make your bio section span two columns */
 
 
-.glossary{
+.glossary {
     grid-column: span 2;
-    
+
 }
-#useful-links{
+
+#useful-links {
     grid-column: span 2;
 }
 
-body{
+body {
     min-height: 100vh;
     overflow: auto;
 
     display: flex;
 }
-.width-wrap{
+
+.width-wrap {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
 }
-footer{
-    margin-top:auto;
-} 
-.gallery{
+
+footer {
+    margin-top: auto;
+}
+
+.gallery {
     grid-column: span 2;
     width: 100%;
 }
-.gallery-thumbnails{
+
+.gallery-thumbnails {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
+
 .gallery-thumbnails img {
     width: 100%;
     display: block;
 }
-.row-span-2{
+
+.row-span-2 {
     grid-row: span 2;
 }
-.col-span-2{
+
+.col-span-2 {
     grid-column: span 2;
 }
 
-.gray { 
+.gray {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
-    
+
     filter: grayscale(100%);
-	
+
 }
+
 .gray:hover {
     filter: none;
 }
@@ -270,7 +290,7 @@ img {
     height: auto;
 }
 
-@media screen and ( max-width: 768px ) {
+@media screen and (max-width: 768px) {
 
     footer hr {
         display: none;
@@ -290,56 +310,134 @@ img {
         display: block;
     }
 
-    .burger{
-        width:40px;
-        height:25px;
-        margin-top:1em;
-        margin-right:auto;
-        margin-left:auto;
+    .burger {
+        width: 40px;
+        height: 25px;
+        margin-top: 1em;
+        margin-right: auto;
+        margin-left: auto;
         border-top: 5px solid #FFBF3E;
         position: relative;
         cursor: pointer;
-        overflow: hidden;
     }
-    .burger::before{
-        content: ""; 
-        position: absolute;
-        width:40px;
-        border-top: 5px solid #FFBF3E;
-        top: 5px; 
+
+    header nav ul {
+        transition: height 500ms ease-in-out;
     }
-    .burger::after{
-        content: ""; 
+    header nav :checked ~ ul {
+        height: 110px;
+    }
+
+    header nav .burger,
+    header nav .burger::before,
+    header nav .burger::after {
+        transition: all 200ms ease-in-out;
+    }
+
+    header nav :checked + .burger {
+        transform:  translate(-5px, 10px) rotate(45deg);
+    }
+
+    header nav :checked + .burger::after {
+        transform: translateY(-20px) rotate(-90deg);
+    }
+
+    header nav :checked + .burger::before {
+        opacity: 0;
+    }
+
+    .burger::before {
+        content: "";
         position: absolute;
-        width:40px;
+        width: 40px;
         border-top: 5px solid #FFBF3E;
-        top: 15px;  
-        
+        top: 5px;
+    }
+
+    .burger::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        border-top: 5px solid #FFBF3E;
+        top: 15px;
+
     }
 
     .row-span-2.col-span-2 {
         grid-row: span 1;
         grid-column: span 1;
     }
-.survey{
-      grid-column: span 2;
-    
 }
-label{
-     margin-top:1em;
-      margin-bottom:0.5em;
+
+.survey {
+    grid-column: span 2;
+
 }
-.Send{
-     margin-top:1em;
-     justify-self: end;
-     font-size: 24px;
-     padding-top:1em;
-     padding-bottom:1em;
-     padding-left:2em;
-     padding-right:2em;
-     background-color:black;
-     
+
+.survey form label {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
-.checkbox{
-    overflow:hidden;
+
+input[type="submit"] {
+    margin-top: 1em;
+    justify-self: end;
+    font-size: 24px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: black;
+
 }
+
+.checkbox {
+    overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    border-left: 3px solid #92a8d1;
+    border-right: 3px solid #92a8d1;
+}
+
+table th {
+    background-color: rgba(0,0,0,0.1);
+}
+table td {
+    background-color: rgba(0,0,0,0.05);
+}
+table tr:nth-child(odd) td {
+    background-color: rgba(0,0,0,0.1);
+}
+
+table tr:nth-child(2) td,
+table tr:nth-child(2) th,
+table tr:nth-child(7) td,
+table tr:nth-child(7) th {
+    border-top: 3px solid #92a8d1;
+}
+
+td {
+    text-align: center;
+}
+
+.survey {
+    grid-column: span 2;
+}
+
+.survey form {
+    display: grid;
+}
+
+header nav input { display: none; }
+header nav .burger { display: block; }
